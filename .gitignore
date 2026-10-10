@@ -1,0 +1,30 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Generated models and outputs
+models/*
+outputs/*
+!models/.gitkeep
+!outputs/.gitkeep
+
+# Secrets
+.env
+*.pem
+*.p8
+
+# Temporary files
+*.log
