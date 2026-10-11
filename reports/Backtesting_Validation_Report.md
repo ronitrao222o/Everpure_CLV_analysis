@@ -97,6 +97,10 @@ The largest static-baseline underestimation occurred in:
 
 These findings are exploratory because some groups contain relatively few observations and records within accounts are related.
 
+#### Figure 1: Forecast Bias by Storage Capacity
+
+![Forecast bias by storage capacity](figures/capacity_forecast_bias.png)
+
 ### 6. Model Explainability
 
 SHAP was applied to the Random Forest comparator to explain how the model's input features contributed to its churn probabilities.
@@ -104,6 +108,12 @@ SHAP was applied to the Random Forest comparator to explain how the model's inpu
 Feature-level SHAP contributions were generated for 276 held-out arrays across seven encoded features.
 
 A total of 1,932 SHAP records were successfully stored in Snowflake, with no missing contribution values.
+
+#### Figure 2: Random Forest Global Feature Importance
+
+![Random Forest global SHAP importance](figures/shap_global_importance.png)
+
+Storage capacity, utilization, and the Medium expansion-potential category had the largest average absolute SHAP contributions in the Random Forest model. These values describe how the model generated its predictions, but do not establish causal relationships or demonstrate strong predictive accuracy.
 
 The selected prevalence benchmark produces a constant probability and therefore does not provide individualized feature explanations.
 
